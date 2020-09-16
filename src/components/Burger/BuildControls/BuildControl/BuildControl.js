@@ -81,7 +81,9 @@ const LessBtn = styled.button`
 const buildControl = (props) => (
   <BuildControl>
     <Label>{props.label}</Label>
-    <LessBtn>Less</LessBtn>
+    <LessBtn onClick={props.removed} disabled={props.disabled}>
+      Less
+    </LessBtn>
     <MoreBtn onClick={props.added}>More</MoreBtn>
   </BuildControl>
 );

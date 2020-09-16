@@ -6,7 +6,7 @@ const BurgerWraper = styled.div`
   width: 100%;
   margin: auto;
   height: 400px;
-  overflow: scroll;
+  overflow-y: scroll;
   text-align: center;
   font-weight: bold;
   font-size: 1.2rem;
