@@ -64,7 +64,7 @@ const OrderButton = styled.button`
 const buildControls = (props) => (
   <BuildControls>
     <p>
-      Current price: <strong>{props.price.toFixed(2)}</strong>
+      Current price: <strong>{props.price.toFixed(2)}$</strong>
     </p>
     {controls.map((ctrl) => (
       <BuildControl
