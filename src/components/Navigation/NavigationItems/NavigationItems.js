@@ -18,8 +18,10 @@ const StyledUl = styled.ul`
 
 const navigationItems = () => (
   <StyledUl>
-    <NavigationItem link="/">Burger builder</NavigationItem>
-    <NavigationItem link="/">Checkout</NavigationItem>
+    <NavigationItem exact link="/">
+      Burger builder
+    </NavigationItem>
+    <NavigationItem link="/orders">Orders</NavigationItem>
   </StyledUl>
 );
 
