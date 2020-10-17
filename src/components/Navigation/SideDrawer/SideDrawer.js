@@ -33,7 +33,7 @@ const sideDrawer = (props) => {
   return (
     <Auxiliary>
       <Backdrop show={props.open} clicked={props.closed} />
-      <SideDrawer opened={props.opened}>
+      <SideDrawer opened={props.opened} onClick={props.closed}>
         <LogoWraper>
           <Logo />
         </LogoWraper>
