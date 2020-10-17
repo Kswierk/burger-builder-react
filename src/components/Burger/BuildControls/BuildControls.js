@@ -76,7 +76,7 @@ const buildControls = (props) => (
       />
     ))}
     <OrderButton onClick={props.ordered} disabled={!props.purchasable}>
-      Order now
+      {props.isAuth ? "ORDER NOW" : "SIGN UP TO ORDER"}
     </OrderButton>
   </BuildControls>
 );

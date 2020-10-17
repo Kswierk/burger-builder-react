@@ -39,7 +39,7 @@ const toolbar = (props) => (
       <Logo>LOGO</Logo>
     </LogoWraper>
     <StyledNav>
-      <NavigationItems />
+      <NavigationItems isAuthenticated={props.isAuth} />
     </StyledNav>
   </StyledToolbar>
 );
