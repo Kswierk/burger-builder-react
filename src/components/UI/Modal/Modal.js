@@ -22,29 +22,32 @@ const StyledModal = styled.div`
   }
 `;
 
-class Modal extends Component {
-  shouldComponentUpdate(nextProps, nextState) {
-    return (
-      nextProps.show !== this.props.show ||
-      nextProps.children !== this.props.children
-    );
-  }
+const Modal = (props) => {
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   return (
+  //     nextProps.show !== this.props.show ||
+  //     nextProps.children !== this.props.children
+  //   );
+  // }
 
-  render() {
-    return (
-      <Auxiliary>
-        <Backdrop show={this.props.show} clicked={this.props.modalClosed} />
-        <StyledModal
-          style={{
-            transform: this.props.show ? "translateY(0)" : "translateY(-100vh)",
-            opacity: this.props.show ? 1 : 0,
-          }}
-        >
-          {this.props.children}
-        </StyledModal>
-      </Auxiliary>
-    );
-  }
-}
+  return (
+    <Auxiliary>
+      <Backdrop show={props.show} clicked={props.modalClosed} />
+      <StyledModal
+        style={{
+          transform: props.show ? "translateY(0)" : "translateY(-100vh)",
+          opacity: props.show ? 1 : 0,
+        }}
+      >
+        {props.children}
+      </StyledModal>
+    </Auxiliary>
+  );
+};
 
-export default Modal;
+export default React.memo(
+  Modal,
+  (prevProps, nextProps) =>
+    nextProps.show === prevProps.show &&
+    nextProps.children !== prevProps.children
+);
