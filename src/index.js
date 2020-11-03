@@ -10,7 +10,6 @@ import thunk from "redux-thunk";
 import orderReducer from "./store/reducers/order";
 import authReducer from "./store/reducers/auth";
 
-// import reducer from "./store/reducers/burgerBuilder";
 import burgerBuilderReducer from "./store/reducers/burgerBuilder";
 
 const composeEnhancers =

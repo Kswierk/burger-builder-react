@@ -12,7 +12,7 @@ import OrderSummary from "../../components/Burger/OrderSummary/OrderSummary";
 import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
 import { connect } from "react-redux";
 import * as burgerBuilderActions from "../../store/actions/index";
-class BurgerBuilder extends Component {
+export class BurgerBuilder extends Component {
   state = {
     purchasable: false,
     purchasing: false,
